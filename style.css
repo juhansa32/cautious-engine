@@ -1,0 +1,132 @@
+body{
+  background:#0b0b0b;
+  color:#eee;
+  font-family:system-ui, sans-serif;
+  margin:0;
+}
+
+#screen{
+  max-width: 980px;
+  margin: 22px auto;
+  padding: 18px;
+  border: 1px solid #222;
+  border-radius: 14px;
+  background:#0f0f0f;
+}
+
+.topbar{ display:flex; flex-direction:column; gap:6px; margin-bottom:12px; }
+.big{ font-size: 20px; font-weight: 900; text-align:center; }
+.small{ font-size: 12px; color:#aaa; text-align:center; }
+.dim{ color:#9aa0a6; }
+
+.story{
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 14px;
+  background:#0b0b0b;
+}
+.story p{ margin: 8px 0; color:#d2d2d2; line-height:1.55; }
+
+.hint{
+  margin-top: 12px;
+  padding: 12px;
+  border: 1px solid #222;
+  border-radius: 12px;
+  background:#0b0b0b;
+  color:#cfcfcf;
+  font-size: 13px;
+}
+
+.panel{
+  margin-top: 14px;
+  border: 1px solid #222;
+  border-radius: 12px;
+  background:#0b0b0b;
+  padding: 12px;
+}
+.panelHead{ font-weight:900; margin-bottom:10px; }
+
+.chatLog{
+  height: 220px;
+  overflow:auto;
+  padding: 10px;
+  background:#060606;
+  border: 1px solid #222;
+  border-radius: 10px;
+}
+
+.row{ display:flex; gap:10px; align-items:center; margin-top:10px; }
+input{
+  flex:1;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #333;
+  background:#0b0b0b;
+  color:#eee;
+}
+button{
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid #333;
+  background:#19d38c;
+  color:#06140e;
+  font-weight: 900;
+  cursor:pointer;
+}
+button:disabled{ opacity:.6; cursor:not-allowed; }
+
+.sys{ color:#9aa0a6; font-style: italic; }
+
+@keyframes screenShake {
+  0% { transform: translate(0,0); }
+  20% { transform: translate(-3px,2px); }
+  40% { transform: translate(3px,-2px); }
+  60% { transform: translate(-2px,-1px); }
+  80% { transform: translate(2px,1px); }
+  100% { transform: translate(0,0); }
+}
+.shake{ animation: screenShake 0.25s; }
+
+.chantMsg{
+  color: #ffd86b;
+  font-weight: 900;
+  text-shadow:
+    0 0 6px rgba(255,216,107,0.8),
+    0 0 12px rgba(255,216,107,0.5);
+  animation: chantGlow 1.2s ease-out;
+}
+@keyframes chantGlow {
+  0% { opacity: 0; transform: scale(1.05); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.hostBox{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.kCard{
+  border:1px solid #222;
+  border-radius:12px;
+  padding:12px;
+  background:#0f0f0f;
+}
+.kTitle{ font-weight:900; margin-bottom:6px; }
+.kDesc{ color:#cfcfcf; line-height:1.5; font-size:13px; }
+.btnRow{ display:flex; gap:10px; flex-wrap:wrap; margin-top:10px; }
+
+.chantPanel{
+  border:1px solid #222;
+  border-radius:12px;
+  padding:12px;
+  background:#0f0f0f;
+}
+.chantItem{
+  padding:8px 10px;
+  border:1px solid #222;
+  border-radius:10px;
+  background:#0b0b0b;
+  cursor:pointer;
+  margin-top:6px;
+}
+.chantItem:hover{ border-color:#19d38c; }
