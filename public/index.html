@@ -2,39 +2,33 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>귀환하지 않은 퇴마</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
   <div id="screen">
-    <div class="topbar">
-      <div class="big" id="actTitle">CONNECT</div>
-      <div class="small">방송용 로컬/서버 버전 (public 폴더)</div>
-    </div>
-
-    <div id="connectPanel">
-      <p class="big">추첨 및 투표를 진행할 치지직 채널의 주소(URL) 또는 채널ID를 알려주세요!</p>
-      <div class="row">
-        <input id="channelInput" placeholder="ex) https://chzzk.naver.com/live/xxxxx 또는 채널ID" />
-        <button id="connectBtn">등록</button>
-      </div>
-      <p id="connectStatus" class="status">상태: 미연결</p>
-      <p class="small">※ 게임 클리어(종료) 시 자동으로 연결 해제됩니다.</p>
-    </div>
+    <h1 id="actTitle">접속 대기</h1>
+    <p class="small">GitHub Pages 체험판</p>
 
     <div id="story"></div>
+    <div id="hint"></div>
 
-    <div id="chatPanel">
+    <div class="panel">
+      <div class="panelHead">채팅</div>
       <div id="chatLog"></div>
       <div class="row">
-        <input id="chatInput" placeholder="채팅(시청자) — 퍼즐 영향 없음" />
+        <input id="chatInput" placeholder="복쟈기 채팅(데모)" />
         <button id="sendBtn">전송</button>
       </div>
-      <div id="hint"></div>
+    </div>
+
+    <div class="panel">
+      <div class="panelHead">호스트(휴복)</div>
+      <div id="hostBox"></div>
     </div>
   </div>
 
-  <script type="module" src="game.js"></script>
+  <script type="module" src="./game.js"></script>
 </body>
 </html>
