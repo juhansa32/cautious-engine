@@ -1,3 +1,5 @@
+import { STORY } from './story.js';
+
 const ws = new WebSocket(`ws://${location.host}`);
 
 const actEl = document.getElementById('act');
@@ -19,13 +21,23 @@ ws.onmessage = (e) => {
 };
 
 function render() {
-  actEl.textContent = currentAct;
+  const s = STORY[currentAct] || {};
+  actEl.textContent = s.title || currentAct;
   buttonsEl.innerHTML = '';
 
-  if (currentAct.startsWith('ACT')) {
-    ['A', 'B', 'C'].forEach(letter => {
+  if (s.text) {
+    s.text.forEach(line => {
+      const p = document.createElement('p');
+      p.textContent = line;
+      buttonsEl.appendChild(p);
+    });
+  }
+
+  if (currentAct.startsWith('ACT') && s.choices) {
+    s.choices.forEach((label, idx) => {
+      const letter = ['A', 'B', 'C'][idx];
       const btn = document.createElement('button');
-      btn.textContent = letter;
+      btn.textContent = `${letter}. ${label}`;
       btn.disabled = voted;
       btn.onclick = () => vote(letter, btn);
       buttonsEl.appendChild(btn);
@@ -58,7 +70,9 @@ function vote(letter, btn) {
   ws.send(JSON.stringify({ type: 'VOTE', choice: letter }));
   voted = true;
   btn.textContent = '기록됨';
-  Array.from(buttonsEl.children).forEach(b => b.disabled = true);
+  Array.from(buttonsEl.children).forEach(b => {
+    if (b.tagName === 'BUTTON') b.disabled = true;
+  });
 }
 
 function showLogs(logs) {
