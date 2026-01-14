@@ -1,12 +1,24 @@
 {
+<<<<<<< HEAD
   "name": "cautious-engine",
+=======
+  "name": "exorcism-game",
+>>>>>>> 79073c80ab6c0ec543f2eaf6d5d99577fa616889
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "start": "node server/index.js"
   },
   "dependencies": {
+<<<<<<< HEAD
     "express": "^4.22.1",
     "ws": "^8.19.0"
   }
 }
+=======
+    "express": "^4.19.2",
+    "ws": "^8.17.0"
+  }
+}
+
+>>>>>>> 79073c80ab6c0ec543f2eaf6d5d99577fa616889

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ===== 화면 흔들림 ===== */
 @keyframes screenShake {
   0% { transform: translate(0,0); }
@@ -41,3 +42,38 @@
     0 0 18px rgba(255,179,0,0.7);
 }
 
+=======
+body {
+  background: #000;
+  color: #fff;
+  font-family: system-ui, sans-serif;
+  text-align: center;
+}
+
+#screen {
+  margin-top: 80px;
+}
+
+p {
+  max-width: 600px;
+  margin: 10px auto;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+button {
+  display: block;
+  margin: 10px auto;
+  padding: 12px 24px;
+  font-size: 16px;
+  background: #111;
+  color: #fff;
+  border: 1px solid #444;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+>>>>>>> 79073c80ab6c0ec543f2eaf6d5d99577fa616889
