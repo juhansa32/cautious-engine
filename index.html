@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>귀환하지 않은 퇴마 (Pages Demo)</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div id="screen">
+    <div class="topbar">
+      <div class="big" id="actTitle">접속 대기</div>
+      <div class="small" id="subTitle">GitHub Pages 체험판 (서버/치지직 연동 없음)</div>
+    </div>
+
+    <div id="story" class="story"></div>
+    <div id="hint" class="hint"></div>
+
+    <div class="panel">
+      <div class="panelHead">채팅</div>
+      <div id="chatLog" class="chatLog"></div>
+      <div class="row">
+        <input id="chatInput" placeholder="복쟈기 채팅(데모)" />
+        <button id="sendBtn">보내기</button>
+      </div>
+      <div class="small dim">※ 데모에서는 채팅이 퍼즐에 영향을 주지 않습니다.</div>
+    </div>
+
+    <div class="panel">
+      <div class="panelHead">호스트(휴복) 컨트롤</div>
+      <div id="hostBox" class="hostBox"></div>
+      <div class="small dim">※ 실전(치지직 연동)은 로컬/서버 버전에서 진행합니다.</div>
+    </div>
+  </div>
+
+  <script type="module" src="./game.js"></script>
+</body>
+</html>
