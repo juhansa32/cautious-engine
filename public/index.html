@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>귀환하지 않은 퇴마</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="screen">
+    <h1 id="actTitle">CONNECT</h1>
+
+    <!-- 1회성 연결 화면 -->
+    <div id="connectPanel">
+      <p class="big">추첨 및 투표를 진행할 치지직 채널의 주소(URL) 또는 채널ID를 알려주세요!</p>
+      <div class="row">
+        <input id="channelInput" placeholder="ex) https://chzzk.naver.com/live/xxxxx 또는 채널ID" />
+        <button id="connectBtn">등록</button>
+      </div>
+      <p id="connectStatus" class="status">상태: 미연결</p>
+      <p class="small">※ 게임 클리어(종료) 시 자동으로 연결 해제됩니다.</p>
+    </div>
+
+    <!-- 스토리 -->
+    <div id="story"></div>
+
+    <!-- 채팅 -->
+    <div id="chatPanel">
+      <div id="chatLog"></div>
+      <div class="row">
+        <input id="chatInput" placeholder="채팅 / 투표: !A !B !C" />
+        <button id="sendBtn">전송</button>
+      </div>
+      <div id="hint"></div>
+    </div>
+  </div>
+
+  <script type="module" src="game.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
