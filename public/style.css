@@ -1,82 +1,77 @@
+/* ===== 화면 흔들림 ===== */
+@keyframes screenShake {
+  0% { transform: translate(0,0); }
+  20% { transform: translate(-3px,2px); }
+  40% { transform: translate(3px,-2px); }
+  60% { transform: translate(-2px,-1px); }
+  80% { transform: translate(2px,1px); }
+  100% { transform: translate(0,0); }
+}
+
+.shake {
+  animation: screenShake 0.25s;
+}
+
+/* ===== 퇴마 문구 채팅 ===== */
+.chantMsg{
+  color: #ffd86b;
+  font-weight: 900;
+  text-shadow:
+    0 0 6px rgba(255,216,107,0.8),
+    0 0 12px rgba(255,216,107,0.5);
+  animation: chantGlow 1.2s ease-out;
+}
+
+@keyframes chantGlow {
+  0% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ===== 강화형 퇴마 문구 (선택) ===== */
+.chantMsg.strong{
+  color:#ffb300;
+  text-shadow:
+    0 0 8px rgba(255,179,0,0.9),
+    0 0 18px rgba(255,179,0,0.7);
+}
+
+=======
 body {
-  margin: 0;
-  background: #0b0b0b;
-  color: #eee;
+  background: #000;
+  color: #fff;
   font-family: system-ui, sans-serif;
+  text-align: center;
 }
 
 #screen {
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 16px;
-  border: 1px solid #222;
-  border-radius: 12px;
-  background: #0f0f0f;
+  margin-top: 80px;
 }
 
-h1 { text-align: center; }
-.small { text-align: center; font-size: 12px; color: #aaa; }
-
-#story p {
+p {
+  max-width: 600px;
+  margin: 10px auto;
   line-height: 1.6;
-  margin: 6px 0;
-}
-
-#hint {
-  margin: 10px 0;
-  font-size: 13px;
   color: #ccc;
 }
 
-.panel {
-  margin-top: 12px;
-  padding: 10px;
-  border: 1px solid #222;
-  border-radius: 10px;
-  background: #0b0b0b;
-}
-
-.panelHead {
-  font-weight: bold;
-  margin-bottom: 6px;
-}
-
-#chatLog {
-  height: 180px;
-  overflow-y: auto;
-  background: #050505;
-  padding: 8px;
-  border-radius: 8px;
-}
-
-.row {
-  display: flex;
-  gap: 6px;
-  margin-top: 6px;
-}
-
-input {
-  flex: 1;
-  padding: 10px;
-  background: #0b0b0b;
-  border: 1px solid #333;
-  color: #eee;
-  border-radius: 8px;
-}
-
 button {
-  padding: 10px 14px;
-  background: #19d38c;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
+  display: block;
+  margin: 10px auto;
+  padding: 12px 24px;
+  font-size: 16px;
+  background: #111;
+  color: #fff;
+  border: 1px solid #444;
   cursor: pointer;
 }
 
-.sys { color: #aaa; font-style: italic; }
-
-.chant {
-  color: #ffd86b;
-  font-weight: bold;
-  text-shadow: 0 0 8px rgba(255,216,107,0.7);
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
 }
